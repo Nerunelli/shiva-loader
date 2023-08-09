@@ -1,0 +1,93 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: container 2.2s infinite;
+}
+
+.rect {
+    position: absolute;
+    display: flex;
+    width: 20%;
+    height: 100%;
+}
+
+.point {
+    animation: point 2.2s infinite;
+}
+
+.rect:nth-child(1) {
+    rotate: 30deg;
+}
+
+.rect:nth-child(2) {
+    rotate: 90deg;
+}
+
+.rect:nth-child(3) {
+    rotate: 150deg;
+}
+
+.rect:nth-child(4) {
+    rotate: 210deg;
+}
+
+.rect:nth-child(5) {
+    rotate: 270deg;
+}
+
+.rect:nth-child(6) {
+    rotate: 330deg;
+}
+
+@keyframes point {
+    0% { 
+        border-radius: 0%;
+    }
+    40% { 
+        border-radius: 100%;
+    } 
+    50% { 
+        border-radius: 0%;
+    }  
+    60% { 
+        height: 20%;
+    }
+    80% { 
+        height: 100%;
+    }
+    90% {
+        height: 20%;
+    }
+}
+
+@keyframes container {
+    20% { 
+        rotate: 120deg;
+    }
+    100% { 
+        rotate: 120deg;
+    }
+}
+
+.point {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    background-color: #5cc6f3;
+}
